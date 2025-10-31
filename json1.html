@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>JSON1</title>
+</head>
+<body>
+    <div id = "text"></div>
+<script>
+const json = {
+"genres": ["Soul", "Emo", "Folk", "Rap", "Rock", "Punk"],
+
+"songs": [{
+"song": "Jezebel",
+"genre": "Soul",
+"artist": "Sade"
+},
+
+{"song": "Untitled (How Does It Feel)",
+"genre": "Soul",
+"artist": "DAngelo"
+},
+
+{"song": "Ex-Factor",
+"genre": "Soul",
+"artist": "Lauryn Hill"
+},
+
+{"song": "I Never Told You What I Do for a Living",
+"genre": "Emo",
+"artist": "My Chemical Romance"
+},
+
+{"song": "Redford (For Yia-Yia and Pappou)",
+"genre": "Folk",
+"artist": "Sufjan Stevens"
+},
+
+{"song": "i",
+"genre": "Rap",
+"artist": "Kendrick Lamar"
+},
+
+{"song": "Tomorrow Never Knows",
+"genre": "Rock",
+"artist": "The Beatles"
+},
+
+{"song": "Happy House",
+"genre": "Punk",
+"artist": "Siouxsie and the Banshees"
+}]}
+
+const json_string = JSON.stringify(json)
+
+document.getElementById("text").innerHTML += json_string;
+
+
+</script>
+</body>
+</html>
