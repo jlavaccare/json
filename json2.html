@@ -7,8 +7,8 @@
     <div id = "text"></div>
 <script>
 const json = $.get("data/songs.json");
-
-const json_obj = JSON.parse(json);
+const json_string = JSON.stringify(json);
+const json_obj = JSON.parse(json_string);
 
 for (i = 0; i < (json_obj.songs.length()); i++){
     document.getElementById("text").innerHTML += "<strong>" + json_obj.songs[i].song + "</strong> <br /> Artist:" + json_obj.songs[i].artist + "<br /> Genre:" + json_obj.songs[i].genre;
