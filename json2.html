@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>JSON2</title>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id = "text"></div>
+<script>
+const json = $.get("data/songs.json");
+
+const json_obj = JSON.parse(json);
+
+for (i = 0; i < (json_obj.songs.length()); i++){
+    document.getElementById("text").innerHTML += "<strong>" + json_obj.songs[i].song + "</strong> <br /> Artist:" + json_obj.songs[i].artist + "<br /> Genre:" + json_obj.songs[i].genre;
+}
+
+</script>
+</body>
+</html>
