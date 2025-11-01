@@ -8,16 +8,16 @@
 <script>
 async function get_json() {
     let response = await $.get("https://jlavaccare.github.io/json/data/songs.json")
-
-        if (response.ok) {
-            let json = await response.text();
+       .done(function(data) {
+            let json = data;
             let text = JSON.stringify(json);
             console.log(text);
             let obj = JSON.parse(text);
-        } else {
-            alert("HTTP-Error: " + response.status);
+        }) 
+        .fail(function(jqXHR, textStatus, errorThrown) {
+            console.error("Request failed:", textStatus, errorThrown);
             obj = "";
-        }
+          })
         return obj;
     }
 
