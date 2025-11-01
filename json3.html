@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>JSON3</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<style type="text/css">
+    body, html {font-family:"Lato", "sans-serif"}
+    .title{font-size:2vw}
+    </style>
+</head>
+<body>
+    <div id = "select_element"></div>
+    <div id = "text_t"></div>
+<script>
+
+    $.get("https://jlavaccare.github.io/json/data/songs.json",
+    function( data )
+    {
+            let json = data;
+            let text = JSON.stringify(json);
+            let json_obj = JSON.parse(text);
+
+            $("#select_element").html("<select id='selector' name='genre'>");
+            for (i = 0; i < (json_obj.genres.length); i++){
+                    $("#selector").append("<option value=" + i + " >" + json_obj.genres[i] + "</option>")
+            };
+
+            $("#select_element").append("<button id='button1' name='filter'>Filter</button>");
+
+            $("#select_element").on('click', '#button1', function() {
+                $("#text_t").html("");
+                for (i = 0; i < (json_obj.songs.length); i++){
+                    if(json_obj.songs[i].genre == $("#selector :selected").text()) {
+                    $("#text_t").append("<p class = 'title'><strong>" + json_obj.songs[i].song + "</strong></p>" );
+                    }
+                }         
+            })
+    })
+
+
+
+
+
+</script>
+</body>
+</html>
