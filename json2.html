@@ -5,10 +5,7 @@
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <style type="text/css">
     body,html{font-family:"Lato", "sans-serif"}
-    #title{color: "#800000"}
-    #artist{font-style:'italic'}
-    #genre{font-size: 20px}
-    #year{color: "#0000ff"}
+    .title{font-size:2vw}
     </style>
 </head>
 <body>
@@ -23,7 +20,7 @@
             console.log(text);
             let json_obj = JSON.parse(text);
             for (i = 0; i < (json_obj.songs.length); i++){
-                    document.getElementById("text").innerHTML += "<p class = 'title'><strong>" + json_obj.songs[i].song + "</strong></p> <br /> <p class='artist'>Artist: " + json_obj.songs[i].artist + "<br /><p/> <p class = 'genre'>Genre: " + json_obj.songs[i].genre + + "<br /><p/> <p class = 'year'>Year: " + json_obj.songs[i].year+ "<p/><br /> <br />";
+                    document.getElementById("text").innerHTML += "<p class = 'title'><strong>" + json_obj.songs[i].song + "</strong></p>  <p class='artist'>Artist: " + json_obj.songs[i].artist + "<p/> <p class = 'genre'>Genre: " + json_obj.songs[i].genre + "<p/> <p class = 'year'>Year: " + json_obj.songs[i].year+ "<p/> <br /> ";
             }
     })
 
