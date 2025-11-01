@@ -6,10 +6,8 @@
 <body>
     <div id = "text"></div>
 <script>
-const json = $.get("https://jlavaccare.github.io/json/data/songs.json");
-
 async function get_json() {
-    let response = await $.get("data/songs.json")
+    let response = await $.get("https://jlavaccare.github.io/json/data/songs.json"")
 
         if (response.ok) {
             let json = await response.text();
