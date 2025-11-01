@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>JSON3</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<style type="text/css">
+    body, html {font-family:"Lato", "sans-serif"}
+    </style>
+</head>
+<body>
+    <div id = "text_t"></div>
+<script>
+
+        async function get_data() {
+        let response = await fetch("https://api.squiggle.com.au/?q=teams&format=json");
+        if (response.ok) {
+            let json = await response.json();
+            let text_t = JSON.stringify(json);
+            console.log(text_t);
+            let objj = JSON.parse(text_t);
+            for(i=0; i< objj.teams.length; i++){
+            $("#text_t").append("<h2>"+"Team: " + objj.teams[i].name+"</h2><p>"+"Abbreviation: "+objj.teams[i].abbrev+"</p> "+"Debut: "+objj.teams[i].debut+"</p> <br/>")
+            }
+        } else {
+            alert("HTTP-Error: " + response.status);
+        }
+    }
+
+    get_data()
+
+
+
+
+
+</script>
+</body>
+</html>
+
