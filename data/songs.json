@@ -4,37 +4,44 @@
 "songs": [{
 "song": "Jezebel",
 "genre": "Soul",
-"artist": "Sade"
+"artist": "Sade",
+"year": 1985
 },
 
 {"song": "Untitled (How Does It Feel)",
 "genre": "Soul",
-"artist": "DAngelo"
+"artist": "D'Angelo",
+"year": 1999
 },
 
 {"song": "Ex-Factor",
 "genre": "Soul",
-"artist": "Lauryn Hill"
+"artist": "Lauryn Hill",
+"year": 1999
 },
 
 {"song": "I Never Told You What I Do for a Living",
 "genre": "Emo",
-"artist": "My Chemical Romance"
+"artist": "My Chemical Romance",
+"year": 2004
 },
 
 {"song": "Redford (For Yia-Yia and Pappou)",
 "genre": "Folk",
-"artist": "Sufjan Stevens"
+"artist": "Sufjan Stevens",
+"year": 2003
 },
 
 {"song": "i",
 "genre": "Rap",
-"artist": "Kendrick Lamar"
+"artist": "Kendrick Lamar",
+"year": 2015
 },
 
 {"song": "Tomorrow Never Knows",
 "genre": "Rock",
-"artist": "The Beatles"
+"artist": "The Beatles",
+"year": 1966
 },
 
 {"song": "Happy House",
