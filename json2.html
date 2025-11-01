@@ -23,7 +23,7 @@
             console.log(text);
             let json_obj = JSON.parse(text);
             for (i = 0; i < (json_obj.songs.length); i++){
-                    document.getElementById("text").innerHTML += "<p class = "title"><strong>" + json_obj.songs[i].song + "</strong></p> <br /> <p class="artist">Artist: " + json_obj.songs[i].artist + "<br /><p/> <p class = "genre">Genre: " + json_obj.songs[i].genre + + "<br /><p/> <p class = "year">Year: " + json_obj.songs[i].year+ "<p/><br /> <br />";
+                    document.getElementById("text").innerHTML += "<p class = 'title'><strong>" + json_obj.songs[i].song + "</strong></p> <br /> <p class='artist'>Artist: " + json_obj.songs[i].artist + "<br /><p/> <p class = 'genre'>Genre: " + json_obj.songs[i].genre + + "<br /><p/> <p class = 'year'>Year: " + json_obj.songs[i].year+ "<p/><br /> <br />";
             }
         })
 
